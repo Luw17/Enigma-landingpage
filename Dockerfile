@@ -1,20 +1,23 @@
-# Usa imagem leve do Node
-FROM node:20-alpine
+# Usa imagem leve do Node.js
+FROM node:20
 
-# Define o diretório de trabalho no container
+# Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia os arquivos de dependência
-COPY package*.json ./
+# Copia apenas os arquivos de dependência
+COPY package.json package-lock.json ./
 
-# Instala as dependências
+# Garante que não há cache quebrado
+RUN rm -rf node_modules
+
+# Instala dependências no ambiente Linux do container
 RUN npm install
 
-# Copia o restante do código
+# Copia o restante dos arquivos da aplicação (sem sobrescrever node_modules)
 COPY . .
 
-# Expõe a porta do Vite (pode ser diferente do frontend principal)
-EXPOSE 4000
+# Expõe a porta do Vite
+EXPOSE 5173
 
-# Comando para rodar com hot reload e acesso externo
-CMD ["npm", "run", "dev", "--", "--port=4000", "--host"]
+# Comando para rodar com hot reload e permitir acesso externo
+CMD ["npm", "run", "dev", "--", "--host"]
