@@ -1,0 +1,18 @@
+.logo-container {
+  display: flex;
+  
+  align-items: center;
+
+}
+
+
+.logo-text {
+  font-family: "antonio", sans-serif;
+  font-size: 22px;
+  color: #0C1618;
+  line-height: 1;
+}
+
+.logo-text strong {
+  color: #A5CAFF;
+}

@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  padding-top: 100px;
+}
+
+
+
+.destaque{
+  text-decoration: underline;
+  color: #A5CAFF;
+}
+
+.slogan h1 {
+  line-height: 1.1;
+  font-family: chivo;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+}
+
+.slogan p {
+  font-family: DM Sans;
+  font-size: 23px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 350px;
+  width: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.callToAction {
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.header {
+  padding-left: 2%;
+  gap: 30px;
+  background-color: white;
+  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row
+ 
 }
 
-.card {
-  padding: 2em;
+.buttonsHeader{
+  display: flex;
+  gap: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.criarConta{
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-right: 2%;
+}
+
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
